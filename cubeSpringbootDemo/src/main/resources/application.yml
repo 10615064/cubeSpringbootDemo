@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: cubeSpringbootDemo
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:cubeDemo
+    username: cubeDemo
+    password: 1qaz@WSX
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: HikariCP
+      minimum-idle: 2
+      maximum-pool-size: 5
+  h2:
+    console:
+      enabled: true
+
+  # username: yao
+  # password: yao0104
+  # driver-class-name: com.mysql.cj.jdbc.Driver
+  # url: jdbc:mysql://127.0.0.1:3306/Yao?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+  # log4jdbc 連線
+  # driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+  # url: jdbc:log4jdbc:mysql://192.168.0.10:3306/Yao?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&serverTimezone=GMT%2B8
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  # open-in-view: false  # 針對DB session處理，簡單CRUD可開啟，複雜邏輯建議關閉
+  # database: mysql  # 指定 DB
+  # show-sql: true  # 是否打印 SQL
+  rabbitmq:
+    # host: 192.168.0.10
+    # port: 5672
+    # username: guest
+    # password: guest
+    listener:
+      simple:
+      # acknowledge-mode: auto  # 是否啟動 ACK (auto, manual)
+      # default-requeue-rejected: false
+      # retry:
+      #   enabled: true
+      #   max-attempts: 5
+      #   initial-interval: 3000
+  kafka:
+    # bootstrap-servers: 192.168.0.10:9092
+    producer:
+    # key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    # value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+    # group-id: kafkaYao
+    # key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    # value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  mail:
+    # host: smtp.gmail.com
+    # port: 587
+    # username: z0928068251@gmail.com
+    # password: tzcgpuycjyblhrvr
+    properties:
+      mail:
+        smtp:
+        # auth: true
+        # starttls.enable: true
+  data:
+    redis:
+    # host: 192.168.0.10
+    # port: 6379
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8080
+# eureka:
+#   client:
+#     service-url:
+#       defaultZone: http://localhost:1000/eureka
