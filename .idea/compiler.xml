@@ -10,13 +10,10 @@
         <module name="cubeSpringbootDemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cubeSpringbootDemo" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="cubeSpringbootDemo" options="-parameters --add-modules java.base" />
+      <module name="cubeSpringbootDemo" options="-parameters" />
     </option>
   </component>
 </project>

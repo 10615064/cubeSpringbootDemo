@@ -1,8 +1,13 @@
 package com.example.cubespringbootdemo.entity;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
+
+/**
+ * 幣別
+ *
+ */
 
 @Data
 @Entity
@@ -13,6 +18,11 @@ public class CurrencyTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    /** 版本 */
+    @Column(name = "VERSION")
+    @Version
+    private Integer version;
 
     /** 幣別(英文) */
     @Column(name = "CURRENCY_CODE")
