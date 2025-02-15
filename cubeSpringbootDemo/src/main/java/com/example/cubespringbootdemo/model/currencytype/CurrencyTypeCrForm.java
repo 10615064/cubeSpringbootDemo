@@ -2,6 +2,7 @@ package com.example.cubespringbootdemo.model.currencytype;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -25,6 +26,8 @@ public class CurrencyTypeCrForm {
     @JsonProperty("version")
     private Integer version;
 
-    private String rowStatus="C";
+    @JsonProperty("rowStatus")
+    @Schema(defaultValue = "C")
+    private String rowStatus = "C";
 
 }

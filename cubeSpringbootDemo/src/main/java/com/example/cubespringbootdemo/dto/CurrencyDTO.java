@@ -25,8 +25,9 @@ public class CurrencyDTO {
     @JsonProperty("rate_float")
     private double rateFloat;
 
-    public CurrencyDTO(String key, Double rateFloat) {
-        this.code = key;
+    public CurrencyDTO(String code, String rate, Double rateFloat) {
+        this.code = code;
+        this.rate = rate;
         this.rateFloat = rateFloat;
     }
 }

@@ -12,5 +12,5 @@ public interface CubeBrService {
 
     ResponseEntity<CoindeskDataDTO> getCoindeskData() throws Exception;
 
-    ResponseEntity<List<CoindeskTransDataDTO>> getCoindeskTransformData() throws Exception;
+    ResponseEntity<CoindeskTransDataDTO> getCoindeskTransformData() throws Exception;
 }

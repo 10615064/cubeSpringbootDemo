@@ -118,7 +118,7 @@ public class CurrencyTypeController {
         return ResponseEntity.ok().build();
     }
 
-    @Operation(summary = "單筆新增/修改幣別主檔")
+    @Operation(summary = "單筆新增幣別主檔")
     @PostMapping("/create")
     public ResponseEntity<String> create(@RequestBody CurrencyTypeCrForm currencyTypeCrForm) throws Exception {
         try {

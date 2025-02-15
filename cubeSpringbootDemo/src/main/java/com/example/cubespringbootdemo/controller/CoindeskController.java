@@ -35,7 +35,7 @@ public class CoindeskController {
 
     @Operation(summary = "取得coindesk 轉換資料")
     @GetMapping("/uiGetCoindeskTransData")
-    public ResponseEntity<List<CoindeskTransDataDTO>> uiGetCoindeskTransData() throws Exception {
+    public ResponseEntity<CoindeskTransDataDTO> uiGetCoindeskTransData() throws Exception {
         try {
             return cubeBrService.getCoindeskTransformData();
         }catch (Exception e) {
